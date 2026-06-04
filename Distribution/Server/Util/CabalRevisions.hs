@@ -254,7 +254,7 @@ checkPackageDescriptions
   changesOk "author"     id authorA authorB
   checkSame "The stability field is unused, don't bother changing it."
             stabilityA stabilityB
-  changesOk' Trivial "tested-with" (show . ppTestedWith) testedWithA testedWithB
+  changesOk "tested-with" (show . ppTestedWith) testedWithA testedWithB
   changesOk "homepage" id homepageA homepageB
   checkSame "The package-url field is unused, don't bother changing it."
             pkgUrlA pkgUrlB
